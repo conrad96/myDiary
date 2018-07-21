@@ -1,15 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/styles.css')}}">
-	<title>Diary</title>
-</head>
-<body>
-	<div class="navbar">
-		<a href="{{url_for('register')}}">Register</a>
-		<a href="{{url_for('login')}}">Login</a>
-	</div>
-<h1>My Diary</h1>
 
+{% include "header.html" %}
+
+<div class="container">
+	{% include "home-navigation.html" %}
+	<center style="padding-top: 150px;">
+	<div class="login" >
+		<form>
+			<input type="text" name="username" placeholder="Username" class="input_field"> <p />
+			<input type="password" name="password" placeholder="Password" class="input_field"><p />
+			<label>&nbsp;</label>
+			<input type="submit" value="Login" id="submit_btn">
+
+		</form>
+	</div>
+	</center>
+</div>
+
+{% include "footer.html" %}
 </body>
 </html>
