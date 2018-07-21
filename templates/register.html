@@ -1,11 +1,24 @@
-<div>
-	<form>
-		<label>Names</label>
-		<input type="text" name="names">
-		<label>Password</label>
-		<input type="text" name="names">
-		<label>Confirm Password</label>
-		<input type="text" name="names">
-
-	</form>
+{%include "header.html" %}
+<div class="container">
+	{%include "home-navigation.html" %}
+	<div class="wrapper">
+		<div class="regForm">
+			<center style="padding-top: 50px;">
+			<form>
+				
+				<input type="text" name="names" class="input_field" placeholder="Full Names"><p />
+				
+				<input type="text" name="uname" class="input_field" placeholder="Username"><p />
+				
+				<input type="password" name="pwd" class="input_field" placeholder="Password"><p />
+				
+				<input type="password" name="cpwd" class="input_field" placeholder="Confirm Password"><p />
+				<label>&nbsp;</label>
+				<input type="submit" value="Register" id="submit_btn">
+			</form>
+			</center>
+		</div>
+	</div>
 </div>
+
+{%include "footer.html" %}
