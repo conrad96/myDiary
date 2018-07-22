@@ -69,4 +69,31 @@ body{
 .wrapper{
 	padding-left: 200px;
 }
+.footer{
+	color:black;
+	font-size: 18px;
+}
+.notification{
+	background:lightblue;
+	height:500px;
+	width: 300px;
+	overflow: auto;
+	border-radius: 8px;
+}
+.notification ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ .box {
+    float: left;
+    width: 50%;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 

@@ -1,0 +1,45 @@
+{% include "header.html"%}
+<div class="container">
+	{% include "user-navigation.html"%}
+	<div class="user-body">
+		<!-- display entries-->
+	<!-- 	<div class="row">
+  <div class="column"></div>
+  <div class="column"></div>
+</div> -->
+		<center><h1>Welcome to your Entries</h1><p /></center>
+		<span>
+			<i><b>Entries:</b><i class="cover" style="background:white;padding:4px 4px 4px 4px;border-radius: 10px;"><b style="color:red">5</b></i></i>
+		</span>
+		<div class="row">
+			<div class="box">
+				<div class="notification" style="font-family: "Tahoma", serif; ">
+					<p />
+					<center>
+						<ul>
+							<li><a href="#" onclick='entry();'>How was your Day ?<img src="{{url_for('static',filename='img/welcome.png')}}" style='width:30px;height:30px;'> </a></li>
+						</ul>
+					</center>
+					<p />
+					<center><u><h4>History</h4></u><p />
+					<ul>
+					<li><a href="#">You Posted on 07-04-4018</a></li>
+					</ul>
+					</center>
+				</div><!-- End  notification-->
+			</div>
+		<div class="box">
+		<div id="new-entry" style="display: block;">
+			<form>
+				<input type="text" name="title" class="input_field" placeholder="Title"><p />
+				<textarea name="body" class="input_field" style="width: 400px;height: 210px;" placeholder="What's on your Mind !!!"></textarea><p />
+				<label>&nbsp;</label>
+				<input type="submit" value="Post" id="submit_btn">
+			</form>
+		</div><!-- End new-entry -->
+		</div><!-- End box -->
+	</div><!-- End div row-->
+	</div>
+</div>
+
+{% include "footer.html"%}
