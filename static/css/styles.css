@@ -70,7 +70,8 @@ body{
 	padding-left: 200px;
 }
 .footer{
-	color:white;
+	color:black;
+	font-size: 18px;
 }
 .notification{
 	background:lightblue;
@@ -83,5 +84,16 @@ body{
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+ .box {
+    float: left;
+    width: 50%;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
