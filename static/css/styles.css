@@ -69,4 +69,19 @@ body{
 .wrapper{
 	padding-left: 200px;
 }
+.footer{
+	color:white;
+}
+.notification{
+	background:lightblue;
+	height:500px;
+	width: 300px;
+	overflow: auto;
+	border-radius: 8px;
+}
+.notification ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
