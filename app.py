@@ -1,7 +1,8 @@
-from flask import Flask,render_template,redirect,url_for,request,json
+from flask import Flask,render_template,redirect,url_for,request,json,jsonify
 import os
 
 app=Flask(__name__)
+users={"fullnames":"conrad mugisha","username":"conrad96","password":"qwerty"}
 
 @app.route('/')
 def index():
@@ -27,25 +28,10 @@ def user():
 def reminders():
 	return render_template('reminders.html')
 
-@app.route('/api',methods=['GET'])
-def rest():
-	return "stuff";
+@app.route('/api/v1/users',methods=['GET'])
+def api_users():
+	return json.dumps(users)
 #registerUser
-
-# @app.route('/addUser',methods=['POST'])
-# def addUser():
-# 	fullnames=request.form['names']
-# 	username=request.form['uname']
-# 	password=request.form['pwd']
-# 	#return render_template('test.html',value=fullnames)
-# 	data=json.dumps({"fullnames":fullnames,"username":username,"password":password})
-# 	message=""
-# 	if not data:
-# 		message="Failed to Register"
-# 	else:
-# 		message="Registered Successfully Proceed to Login"
-
-# 	return render_template('register.html',value=data,feedback=message)
 
 
 #logout user
