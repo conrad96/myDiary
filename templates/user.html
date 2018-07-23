@@ -38,12 +38,12 @@
 			</form>
 		</div><!-- End new-entry -->
 		 
-		<div id="view-entry">
+		<div id="view-entry" style="display: none;">
 			
 			<i style="color: black;padding-left: 10px;" >View and Edit Content of An Entry<img src={{url_for('static',filename='img/smiley.png')}} style="width: 30px;height: 30px;" /></i>
 			<span style="float:right;">
-			<a href="#">Edit </a>&nbsp;&nbsp;&nbsp;
-			<a href="#">Delete </a>
+			<a href="#" onclick="edit();">Edit </a>&nbsp;&nbsp;&nbsp;
+			<a href="#" onclick="remove();">Delete </a>
 			</span>
 			<p />
 			<strong style="padding-left: 10px;">Posted on <i style="color: red;">070-04-2018</i></strong>
@@ -63,7 +63,7 @@
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</span>
 			 
-		</div><!-- End new-entry -->
+		</div><!-- End view-entry -->
   
 		</div><!-- End box -->
 	</div><!-- End div row-->

@@ -24,20 +24,24 @@ body{
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    color: black;
 }
 
 .navigation ul li {
     float: left;
+    text-transform: uppercase;
+    font-size: 15px;
+ 
 }
 .navigation ul li a {
-     display: block;
-    color: blue;
+    display: block;
     text-align: center;
+    color: black;
     padding: 14px 16px;
     text-decoration: none;
 }
 .navigation ul li a:hover{
-	color: black;
+	color: #9aeaea;
 }
  
 
@@ -97,7 +101,7 @@ body{
     clear: both;
 }
 #view-entry{
-	display: block; 
+	
 	border:1px solid gray;
 	border-radius: 8px;
 	color:black;

@@ -6,24 +6,31 @@ app=Flask(__name__)
 def index():
 	return render_template('index.html')
 
+#about Page
 @app.route('/about')
 def register():
 	return render_template('about.html')
 
+#register Page
 @app.route('/register')
 def login():
 	return render_template('register.html')	
 
+#user Page
 @app.route('/user')
 def user():
 	return render_template('user.html')	
 
-@app.route('/entries')
-def entries():
-	return render_template('entries.html')	
+#reminders Page
+@app.route('/reminders')
+def reminders():
+	return render_template('reminders.html')
+	
+#logout user
 @app.route('/logout')
 def logout():
 	return redirect(url_for('index'))
+
 if __name__ == '__main__':
 	app.debug = True
 	port = int(os.environ.get("PORT", 5000))
