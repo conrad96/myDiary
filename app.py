@@ -1,6 +1,8 @@
-from flask import Flask,render_template,redirect,url_for
+from flask import Flask,render_template,redirect,url_for,request,json,jsonify
 import os
+
 app=Flask(__name__)
+users={"fullnames":"conrad mugisha","username":"conrad96","password":"qwerty"}
 
 @app.route('/')
 def index():
@@ -25,7 +27,13 @@ def user():
 @app.route('/reminders')
 def reminders():
 	return render_template('reminders.html')
-	
+
+@app.route('/api/v1/users',methods=['GET'])
+def api_users():
+	return json.dumps(users)
+#registerUser
+
+
 #logout user
 @app.route('/logout')
 def logout():

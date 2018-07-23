@@ -109,4 +109,12 @@ body{
 	height: 350px;
 	overflow: auto;
 }
+.success{
+color: green;
+font-size: 15px;
+}
+.fail{
+color: red;
+font-size:15px;
+}
 
