@@ -7,9 +7,9 @@
   <div class="column"></div>
   <div class="column"></div>
 </div> -->
-		<center><h1>Welcome to your Entries</h1><p /></center>
+		<center><h1 style="color:black;text-shadow: 2px 3px 3px white;">Welcome CONRAD</h1><p /></center>
 		<span>
-			<i><b>Entries:</b><i class="cover" style="background:white;padding:4px 4px 4px 4px;border-radius: 10px;"><b style="color:red">5</b></i></i>
+			<i><b style="color: black;">Entries:</b><i class="cover" style="background:white;padding:4px 4px 4px 4px;border-radius: 10px;"><b style="color:red">5</b></i></i>
 		</span>
 		<div class="row">
 			<div class="box">
@@ -23,20 +23,48 @@
 					<p />
 					<center><u><h4>History</h4></u><p />
 					<ul>
-					<li><a href="#">You Posted on 07-04-4018</a></li>
+					<li><a href="#" onclick="post();">You Posted on 07-04-4018</a></li>
 					</ul>
 					</center>
 				</div><!-- End  notification-->
 			</div>
 		<div class="box">
-		<div id="new-entry" style="display: block;">
-			<form>
+		<div id="new-entry" style="display: none;">
+			<form style="padding-top: 50px;">
 				<input type="text" name="title" class="input_field" placeholder="Title"><p />
 				<textarea name="body" class="input_field" style="width: 400px;height: 210px;" placeholder="What's on your Mind !!!"></textarea><p />
 				<label>&nbsp;</label>
-				<input type="submit" value="Post" id="submit_btn">
+				<input type="submit" name='post_btn' value="Post" id="submit_btn">
 			</form>
 		</div><!-- End new-entry -->
+		 
+		<div id="view-entry">
+			
+			<i style="color: black;padding-left: 10px;" >View and Edit Content of An Entry<img src={{url_for('static',filename='img/smiley.png')}} style="width: 30px;height: 30px;" /></i>
+			<span style="float:right;">
+			<a href="#">Edit </a>&nbsp;&nbsp;&nbsp;
+			<a href="#">Delete </a>
+			</span>
+			<p />
+			<strong style="padding-left: 10px;">Posted on <i style="color: red;">070-04-2018</i></strong>
+			<p />
+			<label style="padding-left: 10px;font-weight: bold;">TITLE:</label>&nbsp;&nbsp;
+			<span class="post_title">
+				Happiness
+			</span>
+			<p />
+			<label style="padding-left: 10px;font-weight: bold;">DESCRIPTION:</label><p />
+			<span class="post_body" style="padding-left: 10px;">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</span>
+			 
+		</div><!-- End new-entry -->
+  
 		</div><!-- End box -->
 	</div><!-- End div row-->
 	</div>

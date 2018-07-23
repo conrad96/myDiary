@@ -87,7 +87,7 @@ body{
 }
  .box {
     float: left;
-    width: 50%;
+    width: 40%;
 }
 
 
@@ -95,5 +95,14 @@ body{
     content: "";
     display: table;
     clear: both;
+}
+#view-entry{
+	display: block; 
+	border:1px solid gray;
+	border-radius: 8px;
+	color:black;
+	background: #d9f7f7;
+	height: 350px;
+	overflow: auto;
 }
 
