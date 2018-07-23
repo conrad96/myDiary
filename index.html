@@ -1,8 +1,22 @@
-
-{% include "header.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>myDiary</title>
+	<link rel="stylesheet" type="text/css" href="static/css/styles.css">
+	<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"> -->
+</head>
+<body>
 
 <div class="container">
-	{% include "home-navigation.html" %}
+	<!-- nav bar to be used in home pages-->
+<div class="navigation"> 
+		<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="/about">About</a></li>
+		<li style="float:right"><a href="/register">Register</a></li>
+		</ul>
+</div>
+
 	<center style="padding-top: 150px;">
 	<div class="login" >
 		<form>
@@ -16,6 +30,10 @@
 	</center>
 </div>
 
-{% include "footer.html" %}
+<div class="footer">
+	<script type="text/javascript" src="static/js/main.js"></script>
+<center><b>&copy;2018 Conrad96 =>Conrad Mugisha</b></center>
+</div>
+
 </body>
 </html>

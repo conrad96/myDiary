@@ -1,11 +1,24 @@
 <!-- About Page including Header/Footer sections to avoid repetition-->
-{% include "header.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>myDiary</title>
+	<link rel="stylesheet" type="text/css" href="static/css/styles.css">
+	<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"> -->
+</head>
+
 <div class="container">	
-{% include "home-navigation.html" %}
+<div class="navigation"> 
+		<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="/about">About</a></li>
+		<li style="float:right"><a href="/register">Register</a></li>
+		</ul>
+</div>
 	<div class="about">
 		<center>
 		<p />
-			<img src="{{url_for('static',filename='img/diary2.jpg')}}" style="width: 40%;height: 25%;">
+			<img src="static/img/diary2.jpg" style="width: 40%;height: 25%;">
 		<p />
 	This is a Diary Web Application Coded in Flask Python Framework.That Does the Following Below:
 		<hr />
@@ -21,6 +34,11 @@ Required Features<p>
 		
 	</div>
 </div>
-{% include "footer.html" %}
+
+<div class="footer">
+	<script type="text/javascript" src="static/js/main.js"></script>
+<center><b>&copy;2018 Conrad96 =>Conrad Mugisha</b></center>
+</div>
+
 </body>
 </html>

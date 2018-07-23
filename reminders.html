@@ -1,10 +1,27 @@
-{% include "header.html"%}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>myDiary</title>
+	<link rel="stylesheet" type="text/css" href="static/css/styles.css">
+	<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"> -->
+</head>
+
 <div class="container">
-	{% include "user-navigation.html"%}
+	<!-- nav bar to be used in users pages-->
+<div class="navigation"> 
+		<ul>
+		<li><a href="/user">Home</a></li>
+		<li><a href="/reminders">Reminders</a></li>
+		<li style="float:right"><a href="/logout">Logout</a></li>
+		</ul>
+</div>
 	<div class="user-body">
 		<!-- display entries-->
 		<h3>Welcome to your Entries Add Entry</h3>
 	</div>
 </div>
 
-{% include "footer.html"%}
+<div class="footer">
+	<script type="text/javascript" src="static/js/main.js"></script>
+<center><b>&copy;2018 Conrad96 =>Conrad Mugisha</b></center>
+</div>
