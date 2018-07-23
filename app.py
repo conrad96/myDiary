@@ -1,5 +1,6 @@
-from flask import Flask,render_template,redirect,url_for
+from flask import Flask,render_template,redirect,url_for,request,json
 import os
+
 app=Flask(__name__)
 
 @app.route('/')
@@ -25,7 +26,28 @@ def user():
 @app.route('/reminders')
 def reminders():
 	return render_template('reminders.html')
-	
+
+@app.route('/api',methods=['GET'])
+def rest():
+	return "stuff";
+#registerUser
+
+# @app.route('/addUser',methods=['POST'])
+# def addUser():
+# 	fullnames=request.form['names']
+# 	username=request.form['uname']
+# 	password=request.form['pwd']
+# 	#return render_template('test.html',value=fullnames)
+# 	data=json.dumps({"fullnames":fullnames,"username":username,"password":password})
+# 	message=""
+# 	if not data:
+# 		message="Failed to Register"
+# 	else:
+# 		message="Registered Successfully Proceed to Login"
+
+# 	return render_template('register.html',value=data,feedback=message)
+
+
 #logout user
 @app.route('/logout')
 def logout():
