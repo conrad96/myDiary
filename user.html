@@ -11,7 +11,7 @@
 		<ul>
 		<li><a href="user.html">Home</a></li>
 		<li><a href="about.html">About</a></li>
-		<li style="float:right"><a href="register.html">Register</a></li>
+		<li class="reglink"><a href="register.html">Register</a></li>
 		</ul>
 </div>
 	<div class="user-body">
@@ -20,17 +20,17 @@
   <div class="column"></div>
   <div class="column"></div>
 </div> -->
-		<center><h1 style="color:black;text-shadow: 2px 3px 3px white;">Welcome CONRAD</h1><p /></center>
+		<center><h1 class="header-title">Welcome CONRAD</h1><p /></center>
 		<span>
-			<i><b style="color: black;">Entries:</b><i class="cover" style="background:white;padding:4px 4px 4px 4px;border-radius: 10px;"><b style="color:red">5</b></i></i>
+			<i><b class="entry-text">Entries:</b><i class="cover" style=""><b class="counter">5</b></i></i>
 		</span>
 		<div class="row">
 			<div class="box">
-				<div class="notification" style="font-family: "Tahoma", serif; ">
+				<div class="notification">
 					<p />
 					<center>
 						<ul>
-							<li><a href="#" onclick='entry();'>How was your Day ?<img src="{{url_for('static',filename='img/welcome.png')}}" style='width:30px;height:30px;'> </a></li>
+							<li><a href="#" onclick='entry();'>How was your Day ?<img src="static/img/welcome.png" class='icon-smiley'> </a></li>
 						</ul>
 					</center>
 					<p />
@@ -42,32 +42,32 @@
 				</div><!-- End  notification-->
 			</div>
 		<div class="box">
-		<div id="new-entry" style="display: none;">
-			<form style="padding-top: 50px;">
+		<div id="new-entry" >
+			<form >
 				<input type="text" name="title" class="input_field" placeholder="Title"><p />
-				<textarea name="body" class="input_field" style="width: 400px;height: 210px;" placeholder="What's on your Mind !!!"></textarea><p />
+				<textarea name="body" class="input_field" id="txtarea" placeholder="What's on your Mind !!!"></textarea><p />
 				<label>&nbsp;</label>
 				<input type="submit" name='post_btn' value="Post" id="submit_btn">
 			</form>
 		</div><!-- End new-entry -->
 		 
-		<div id="view-entry" style="display: none;">
+		<div id="view-entry">
 			
-			<i style="color: black;padding-left: 10px;" >View and Edit Content of An Entry<img src={{url_for('static',filename='img/smiley.png')}} style="width: 30px;height: 30px;" /></i>
-			<span style="float:right;">
+			<i>View and Edit Content of An Entry<img src="static/img/smiley.png" class="icon-smiley"/></i>
+			<span class="floaters">
 			<a href="#" onclick="edit();">Edit </a>&nbsp;&nbsp;&nbsp;
 			<a href="#" onclick="remove();">Delete </a>
 			</span>
 			<p />
-			<strong style="padding-left: 10px;">Posted on <i style="color: red;">070-04-2018</i></strong>
+			<strong class="title-date">Posted on <i style="color: red;">070-04-2018</i></strong>
 			<p />
-			<label style="padding-left: 10px;font-weight: bold;">TITLE:</label>&nbsp;&nbsp;
+			<label class="title-title">TITLE:</label>&nbsp;&nbsp;
 			<span class="post_title">
 				Happiness
 			</span>
 			<p />
-			<label style="padding-left: 10px;font-weight: bold;">DESCRIPTION:</label><p />
-			<span class="post_body" style="padding-left: 10px;">
+			<label class="description">DESCRIPTION:</label><p />
+			<span class="post_body" >
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

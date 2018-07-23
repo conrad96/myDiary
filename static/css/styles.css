@@ -83,6 +83,7 @@ body{
 	width: 300px;
 	overflow: auto;
 	border-radius: 8px;
+	font-family: "Tahoma", serif; 
 }
 .notification ul {
     list-style-type: none;
@@ -117,4 +118,63 @@ font-size: 15px;
 color: red;
 font-size:15px;
 }
+.reglink{
+	float:right
+}
+.about-pic{
+	width: 40%;
+	height: 25%;
+}
+.login-fit{
+	padding-top: 150px;
+}
+.reg-form{
+	padding-top: 50px;
+}
+.header-title{
+	color:black;text-shadow: 2px 3px 3px white;
+}
+.entry-text{
+	color: black;
+}
+.cover{
+	background:white;
+	padding:4px 4px 4px 4px;
+	border-radius: 10px;
+}
+.counter{
+	color:red;
+}
 
+.icon-smiley{
+width:30px;
+height:30px;
+}
+#new-entry{
+	display: none;
+}
+#new-entry form{
+	padding-top: 50px;
+}
+#txtarea{
+	width: 400px;
+	height: 210px;
+}
+#view-entry{
+	display: none;
+}
+.floaters{
+	float:right;
+}
+.title-date{
+	padding-left: 10px;
+}
+.title-title{
+	padding-left: 10px;font-weight: bold;
+}
+.description{
+	padding-left: 10px;font-weight: bold;
+}
+.post_body{
+padding-left: 10px;
+}
