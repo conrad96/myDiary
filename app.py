@@ -4,7 +4,6 @@ import os
 import json
 
 
-
 app=Flask(__name__)
 
 users=[{"user_id":1,"fullnames":"Bill","username":"Bill12","password":"12345"},
@@ -84,7 +83,6 @@ def modifyEntry(id):
 def custom404(error):
     response = jsonify({'message': error.description,'status':404})
     return response
-
 
 #logout user
 @app.route('/logout')
