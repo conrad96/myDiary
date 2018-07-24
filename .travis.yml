@@ -1,7 +1,8 @@
 language: python
 python:
-  -3.5
+  - "3.5"
+cache: pip
 install:
-    pip install unittest
-script: python test_Api.py
-
+  - pip install -r requirements.txt
+script:
+  - python test_Api.py
