@@ -1,7 +1,12 @@
+
 from flask import Flask,render_template,redirect,url_for,request,jsonify,abort
-import os,json
+import os
+import json
+
+
 
 app=Flask(__name__)
+users={"fullnames":"conrad mugisha","username":"conrad96","password":"qwerty"}
 
 users=[
 {"user_id":1,"fullnames":"Bill","username":"Bill12","password":"12345"},
@@ -41,6 +46,7 @@ def user():
 @app.route('/reminders')
 def reminders():
 	return render_template('reminders.html')
+
 
 '''get all users '''
 @app.route("/api/v1/users",methods=["GET"])
@@ -84,6 +90,10 @@ def modifyEntry(id):
 def custom404(error):
     response = jsonify({'message': error.description,'status':404})
     return response
+=======
+@app.route('/api/v1/users',methods=['GET'])
+def api_users():
+	return json.dumps(users)
 
 #logout user
 @app.route('/logout')
