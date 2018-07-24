@@ -4,5 +4,4 @@ python:
 cache: pip
 install:
   - pip install unittest
-script:
-  - python test_Api.py
+script: python test_Api.py
