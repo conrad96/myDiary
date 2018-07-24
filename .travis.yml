@@ -1,6 +1,6 @@
 language: python
 python:
-  -3.5
+  -3.5.4
 install:
     pip install unittest
 script: python test_Api.py
