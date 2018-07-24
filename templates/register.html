@@ -4,13 +4,7 @@
 	<div class="wrapper">
 		<div class="regForm">
 			<center style="padding-top: 50px;">
-				{% if ( feedback != "" ): %}
-					{% if(feedback == "Failed to Register" ) %}	
-					<i class="fail">{feedback}</i>
-					{% else %}
-					<i class="success">{feedback}</i>
-					{% endelse %}
-				{% endif %}
+				
 			<form action="/addUser" method="POST">
 				<input type="text" name="names" class="input_field" placeholder="Full Names"><p />
 				<input type="text" name="uname" class="input_field" placeholder="Username"><p />

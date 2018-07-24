@@ -1,7 +1,10 @@
 language: python
 python:
-  - 2.7
+  - 3.6
 cache: pip
 install:
   - pip install unittest
-script: python test_Api.py
+  - pip install virtualenv
+script:
+  - python test_Api.py
+
