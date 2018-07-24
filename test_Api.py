@@ -13,10 +13,6 @@ class TestApi(unittest.TestCase):
 		self.assertEqual(response.status_code,200)
 		self.assertEqual(response.content_type,'application/json')
 
-	def test_addEntry(self):
-		response=self.app.post('/api/v1/entries/')
-		self.assertTrue(response.status_code,200)
-		 	
 
 if __name__=='__main__':
 	unittest.main()		
