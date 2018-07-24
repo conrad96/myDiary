@@ -5,6 +5,7 @@ cache: pip
 install:
   - pip install unittest
   - pip install virtualenv
+  -pip install pylint
 script:
   - python test_Api.py
 
