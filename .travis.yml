@@ -1,7 +1,8 @@
 language: python
 python:
-  -3.5.4
+  - 2.7
+cache: pip
 install:
-    pip install unittest
-script: python test_Api.py
-
+  - pip install unittest
+script:
+  - python test_Api.py
