@@ -1,9 +1,23 @@
 language: python
 python:
-  - 3.6
+  - "2.6"
+  - "2.7"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.5-dev"   
+  - "3.6"
+  - "3.6.6  
+  - "3.7-dev"  
+  
 cache: pip
 install:
-  - pip install unittest
+  - pip install .
+  - pip install -r requirements.txt
   - pip install virtualenv
-script:
-  - python test_Api.py
+   - pip install flask
+  - pip install pylint
+  - pip install pytest
+  - pip install --user -r requirements.txt
+  script: python test_Api.py
+
