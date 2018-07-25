@@ -1,7 +1,7 @@
 
 [![Build Status](https://travis-ci.org/conrad96/myDiary.svg?branch=develop)](https://travis-ci.org/conrad96/myDiary)
 
-[![Coverage Status](https://coveralls.io/repos/github/conrad96/myDiary/badge.svg?branch=develop)](https://coveralls.io/github/conrad96/myDiary?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/github/conrad96/myDiary/badge.svg)](https://coveralls.io/github/conrad96/myDiary)
 
 myDiary Application
 -Flask Web App for Diary Functionality
