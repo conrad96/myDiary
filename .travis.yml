@@ -12,12 +12,13 @@ python:
   
 cache: pip
 install:
-  - pip install .
   - pip install -r requirements.txt
   - pip install virtualenv
-   - pip install flask
+  - pip install coveralls
+  - pip install coverage
+  - pip install nose
+  - pip install flask
   - pip install pylint
   - pip install pytest
-  - pip install --user -r requirements.txt
   script: python test_Api.py
 
