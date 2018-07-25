@@ -1,9 +1,10 @@
 language: python
-python:
-  - 3.6
-cache: pip
+python: 3.6.6
 install:
-  - pip install unittest
-  - pip install virtualenv
+  - pip install -r requirements.txt
+  - pip install pytest pytest-cov
+  - pip install coveralls
 script:
   - python test_Api.py
+after_success:
+  - coveralls
