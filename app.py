@@ -16,35 +16,11 @@ entries=[{"entry_id":1,"username":"Bill12","title":"My Day 1","body":"Dear Diary
 {"entry_id":4,"username":"mugisha12","title":"My Day 4","body":"Dear Diary Today was so exhausting 4","date":"7-25-2018"},
 {"entry_id":2,"username":"Henry12","title":"My Day 2","body":"Dear Diary Today was so exhausting 2","date":"7-26-2018"}]
 
-@app.route('/')
-def index():
-	return render_template('index.html')
-
-#about Page
-@app.route('/about')
-def register():
-	return render_template('about.html')
-
-#register Page
-@app.route('/register')
-def login():
-	return render_template('register.html')	
-
-#user Page
-@app.route('/user')
-def user():
-	return render_template('user.html')	
-
-#reminders Page
-@app.route('/reminders')
-def reminders():
-	return render_template('reminders.html')
-
 
 '''get all users '''
 @app.route("/api/v1/users",methods=["GET"])
 def api_users():
-	return json.dumps(users)
+	return jsonify({"users":users})
 
 '''get all entries'''
 @app.route("/api/v1/entries/",methods=["GET"])
