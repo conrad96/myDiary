@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/conrad96/myDiary.svg?branch=master)](https://travis-ci.org/conrad96/myDiary)
+[![Build Status](https://travis-ci.org/conrad96/myDiary.svg?branch=develop)](https://travis-ci.org/conrad96/myDiary)
 
 [![Coverage Status](https://coveralls.io/repos/github/conrad96/myDiary/badge.svg?branch=develop)](https://coveralls.io/github/conrad96/myDiary?branch=develop)
 
