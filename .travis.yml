@@ -16,7 +16,6 @@ install:
   - pip install -r requirements.txt
   - pip install virtualenv
    - pip install flask
-  - pip install unittest
   - pip install pylint
   - pip install pytest
   - pip install --user -r requirements.txt
