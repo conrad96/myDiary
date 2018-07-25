@@ -18,9 +18,16 @@ entries=[{"entry_id":1,"username":"Bill12","title":"My Day 1","body":"Dear Diary
 
 
 '''get all users '''
-@app.route("/api/v1/users",methods=["GET"])
+@app.route("/api/v1/users/",methods=["GET"])
 def api_users():
 	return jsonify({"users":users})
+
+'''add new user '''
+@app.route("/api/v1/users/",methods=["POST"])
+def api_Adduser():
+	add_user=dict(user_id=request.json['user_id'],fullnames=request.json['fullnames'],username=request.json['username'],password=request.json['password'])
+	users.append(add_user)
+	return jsonify({"response":"User Added"})
 
 '''get all entries'''
 @app.route("/api/v1/entries/",methods=["GET"])
