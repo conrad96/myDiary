@@ -1,34 +1,44 @@
 
-from flask import Flask,render_template,redirect,url_for,request,jsonify,abort
-import os
-import json
-
-
+from flask import Flask,render_template,redirect,url_for,request,jsonify,abort,make_response
+from database import Database
+import os,json,jwt
+import datetime
 app=Flask(__name__)
-
-users=[{"user_id":1,"fullnames":"Bill","username":"Bill12","password":"12345"},
-{"user_id":2,"fullnames":"Henry","username":"Henry12","password":"12345"},
-{"user_id":3,"fullnames":"Ariho","username":"Ariho12","password":"12345"},
-{"user_id":4,"fullnames":"mugisha","username":"mugisha12","password":"12345"}]
-
-entries=[{"entry_id":1,"username":"Bill12","title":"My Day 1","body":"Dear Diary Today was so exhausting 1","date":"7-23-2018"},
+db=Database()
+app.config['SECRET_KEY']='mysecret123'
+entries=[
+{"entry_id":1,"username":"Bill12","title":"My Day 1","body":"Dear Diary Today was so exhausting 1","date":"7-23-2018"},
 {"entry_id":3,"username":"Ariho12","title":"My Day 3","body":"Dear Diary Today was so exhausting 3","date":"7-24-2018"},
 {"entry_id":4,"username":"mugisha12","title":"My Day 4","body":"Dear Diary Today was so exhausting 4","date":"7-25-2018"},
 {"entry_id":2,"username":"Henry12","title":"My Day 2","body":"Dear Diary Today was so exhausting 2","date":"7-26-2018"}]
 
-
 '''get all users '''
 @app.route("/api/v1/users/",methods=["GET"])
 def api_users():
-	return jsonify({"users":users})
+	response=db.getUsers()
+	return jsonify({"users":response})
 
-'''add new user '''
+'''add new user to database return response on activity'''
 @app.route("/api/v1/users/",methods=["POST"])
 def api_Adduser():
-	add_user=dict(user_id=request.json['user_id'],fullnames=request.json['fullnames'],username=request.json['username'],password=request.json['password'])
-	users.append(add_user)
-	return jsonify({"response":"User Added"})
-
+	fullnames=request.json['fullnames']
+	username=request.json['username']
+	password=request.json['password']
+	check=db.addUser(fullnames,username,password)
+	return jsonify({"response":check})
+'''login user'''
+@app.route("/api/v1/auth/login/",methods=['POST'])
+def api_login():
+	auth=request.authorization
+	username=request.json['username']
+	password=request.json['password']
+	verify=db.loginUser(username,password)
+	if verify:
+		token=jwt.encode({"user":username,'exp':datetime.datetime.utcnow()+datetime.timedelta(seconds=10)},app.config['SECRET_KEY'])
+		return jsonify({"token":token.decode('UTF-8')})
+	else:
+		return jsonify({"response":"Incorrect password or Username"})	
+	# return make_response("Sorry Couldn't Verify",401,{'www-Authenticate':'Basic-Realm="Login Required"'})	
 '''get all entries'''
 @app.route("/api/v1/entries/",methods=["GET"])
 def api_entries():
