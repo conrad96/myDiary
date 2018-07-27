@@ -3,7 +3,6 @@ from flask import Flask,render_template,redirect,url_for,request,jsonify,abort
 import os
 import json
 
-
 app=Flask(__name__)
 
 users=[{"user_id":1,"fullnames":"Bill","username":"Bill12","password":"12345"},

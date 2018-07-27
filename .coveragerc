@@ -1,0 +1,29 @@
+[run]
+
+[report]
+omit = venv/*
+      */asyncio/*
+      */concurrent/*
+      */click/*
+      */colorama/*
+      */jinja2/*
+      */markupsafe/*
+      */werkzeug/*
+      */flask/*
+      */ctypes/*
+      */itsdangerous.py
+      */html/*
+      */multiprocessing/*
+      */decimal.py
+      */uuid.py
+      */numbers.py
+      */encodings/*
+      */hmac.py
+      */http/cookiejar.py      
+      */mimetypes.py                      
+      */stringprep.py
+      */api/__init__.py
+       
+
+[html]
+directory = coverage_html
