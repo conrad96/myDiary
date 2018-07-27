@@ -2,7 +2,7 @@
 from flask import Flask,render_template,redirect,url_for,request,jsonify,abort
 import os
 import json
-
+import datetime
 app=Flask(__name__)
 
 users=[{"user_id":1,"fullnames":"Bill","username":"Bill12","password":"12345"},
@@ -46,7 +46,7 @@ def api_searchEntry(id):
 @app.route('/api/v1/entries/',methods=["POST"])
 def api_addEntry():
 	add_entry=dict(entry_id=request.json['entry_id'],title=request.json['title'],body=request.json['body'],date=request.json['date'])
-	entries.append(add_entry)
+	entries.append(add_entry),201
 	return jsonify({"response":"Entry Added"})
 
 '''modify an entry by searching the json object where it exists and new values assigned to the keys'''
