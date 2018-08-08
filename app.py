@@ -2,8 +2,7 @@
 from flask import Flask,render_template,redirect,url_for,request,jsonify,abort
 import os
 import json
-
-
+import datetime
 app=Flask(__name__)
 
 users=[{"user_id":1,"fullnames":"Bill","username":"Bill12","password":"12345"},
@@ -16,35 +15,18 @@ entries=[{"entry_id":1,"username":"Bill12","title":"My Day 1","body":"Dear Diary
 {"entry_id":4,"username":"mugisha12","title":"My Day 4","body":"Dear Diary Today was so exhausting 4","date":"7-25-2018"},
 {"entry_id":2,"username":"Henry12","title":"My Day 2","body":"Dear Diary Today was so exhausting 2","date":"7-26-2018"}]
 
-@app.route('/')
-def index():
-	return render_template('index.html')
-
-#about Page
-@app.route('/about')
-def register():
-	return render_template('about.html')
-
-#register Page
-@app.route('/register')
-def login():
-	return render_template('register.html')	
-
-#user Page
-@app.route('/user')
-def user():
-	return render_template('user.html')	
-
-#reminders Page
-@app.route('/reminders')
-def reminders():
-	return render_template('reminders.html')
-
 
 '''get all users '''
-@app.route("/api/v1/users",methods=["GET"])
+@app.route("/api/v1/users/",methods=["GET"])
 def api_users():
-	return json.dumps(users)
+	return jsonify({"users":users})
+
+'''add new user '''
+@app.route("/api/v1/users/",methods=["POST"])
+def api_Adduser():
+	add_user=dict(user_id=request.json['user_id'],fullnames=request.json['fullnames'],username=request.json['username'],password=request.json['password'])
+	users.append(add_user)
+	return jsonify({"response":"User Added"})
 
 '''get all entries'''
 @app.route("/api/v1/entries/",methods=["GET"])
@@ -64,7 +46,7 @@ def api_searchEntry(id):
 @app.route('/api/v1/entries/',methods=["POST"])
 def api_addEntry():
 	add_entry=dict(entry_id=request.json['entry_id'],title=request.json['title'],body=request.json['body'],date=request.json['date'])
-	entries.append(add_entry)
+	entries.append(add_entry),201
 	return jsonify({"response":"Entry Added"})
 
 '''modify an entry by searching the json object where it exists and new values assigned to the keys'''

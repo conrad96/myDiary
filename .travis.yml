@@ -3,10 +3,11 @@ python: 3.6.6
 install:
   - pip install -r requirements.txt
   - pip install pytest pytest-cov
-  - pip install coverage
   - pip install coveralls
+  - pip install coverage
   - pip install nose
 script:
   - python test_Api.py
+  - nosetests -v --with-coverage --cover-package=app.py
 after_success:
   - coveralls
